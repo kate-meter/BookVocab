@@ -21,16 +21,22 @@ class Main{
                 System.out.println("Are you learning vocab?");
                 boolean vocab = scan.nextBoolean();
                 while(vocab){
-                    //randomize array
-                    for(String word : vocabList){
-                        System.out.println(definition);
-                    }
-                    String guess = scan.nextLine();
-                    if(word.equals(guess)){
-                        System.out.println("Nice!");
+                    if(vocabList.size() == 0){
+                        vocab == false;
+                        System.out.println("Add more vocab first!);
                     }
                     else{
-                        System.out.println(word);
+                        Collections.shuffle(vocabList);
+                        for(String word : vocabList){
+                            System.out.println(definition);
+                            String guess = scan.nextLine();
+                            if(word.equals(guess)){
+                                System.out.println("Nice!");
+                            }
+                            else{
+                                System.out.println(word);
+                            }
+                        }
                     }
                 }
             }

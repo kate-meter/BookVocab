@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter username: ");
+        String username = scan.nextLine();
+        while(1){
+            System.out.println("Are you reading?");
+            boolean reading = scan.nextBoolean();
+            if(reading){
+                System.out.println("Which book?");
+                String book = scan.nextLine();
+                while(reading){
+                    String word = scan.nextLine();
+                    //find definition
+                    System.out.println(definition);
+                }
+            }
+            else{
+                System.out.println("Are you learning vocab?");
+                boolean vocab = scan.nextBoolean();
+                while(vocab){
+                    //randomize array
+                    for(String word : vocabList){
+                        System.out.println(definition);
+                    }
+                    String guess = scan.nextLine();
+                    if(word.equals(guess)){
+                        System.out.println("Nice!");
+                    }
+                    else{
+                        System.out.println(word);
+                    }
+                }
+            }
+        }
+        scan.close();
+    }
+}
